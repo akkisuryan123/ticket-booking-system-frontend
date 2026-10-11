@@ -1,16 +1,94 @@
-# React + Vite
+# Ticket Booking System — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A responsive web application built with React that allows users to explore events and book tickets through a Spring Boot REST API.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Event Listing:** Fetch and display events from the backend.
+- **Ticket Booking:** Book tickets by entering name, email, mobile number, and ticket quantity.
+- **Event Selection:** Select an event and submit a booking request.
+- **Form Validation:** Validate booking details before submission.
+- **Booking Feedback:** Display booking success or error messages.
+- **Backend Integration:** Communicate with the Spring Boot backend using REST APIs.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- JavaScript
+- Vite
+- HTML5
+- CSS3
+- Fetch API
+- Git and GitHub
 
-## Expanding the Oxlint configuration
+## Prerequisites
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+Install the following before running the project:
+
+- Node.js
+- npm
+- Git
+
+The Spring Boot backend should be running locally for event loading and booking operations.
+
+## Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/akkisuryan123/ticket-booking-system-frontend.git
+cd ticket-booking-system-frontend
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Start the Development Server
+
+```bash
+npm run dev
+```
+
+Open the URL shown in your terminal. By default, Vite uses:
+
+http://localhost:5173
+
+## Backend Configuration
+
+The frontend communicates with the Spring Boot backend running on:
+
+http://localhost:9090
+
+The Vite development server proxies API requests beginning with `/api` to the backend. Check `vite.config.js` for the proxy configuration.
+
+Make sure the backend and MySQL database are configured and running before testing the booking flow.
+
+## Project Structure
+
+```text
+ticket-booking-frontend/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+## Backend Repository
+
+https://github.com/akkisuryan123/ticket-booking-system-backend
+
+## Author
+
+**Abhishek Suryan**
+
+GitHub: https://github.com/akkisuryan123
